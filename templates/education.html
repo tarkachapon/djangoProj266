@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <h1>Education.</h1>
+    <div class="row text-center">
+        <div class="col-lg-4">
+            <img src="{% static 'images/edu1.jpg' %}" class="bd-placeholder-img rounded-circle" width="250" height="250">
+            <h2 class="fw-normal" style="color: darkblue">ปริญาตรี</h2>
+            <hr>
+            <p class="mb-0">มหาวิทยาลัยเทคโนโลยีราชมงคลอีสาน วิทยาเขตขอนแก่น</p>
+            <p style="color: darkblue"><strong>ปัจจุบัน</strong></p></div>
+        <div class="col-lg-4">
+            <img src="{% static 'images/edu2.jpg' %}" class="bd-placeholder-img rounded-circle" width="250" height="250">
+            <h2 class="fw-normal" style="color: darkblue">ปวส.</h2>
+            <hr>
+            <p class="mb-0">วิทยาลัยเทคนิคราษีไศล</p>
+            <p style="color: darkblue"><strong>2020 - 2022</strong></p></div>
+        <div class="col-lg-4">
+            <img src="{% static 'images/edu3.jpg' %}" class="bd-placeholder-img rounded-circle" width="250" height="250">
+            <h2 class="fw-normal" style="color: darkblue">ปวช.</h2>
+            <hr>
+            <p class="mb-0">วิทยาลัยเทคโนโลยีและการจัดการราษีไศล</p>
+            <p style="color: darkblue"><strong>2017 - 2019</strong></p>
+        </div>
+    </div>
+{% endblock %}

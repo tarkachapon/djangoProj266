@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <h1>Profile.</h1>
+    <div class="row">
+        <div class="col-lg-5">
+            <img src="{% static 'images/profile.jpg' %}" class="img-fluid rounded-circle" alt="...">
+        </div>
+        <div class="col-lg-6">
+            <ul class="list-unstyled">
+                <h2 style="color: darkblue">นายคชาพล พูนผล</h2>
+                <hr>
+                <ul>
+                    <li>ชื่อเล่น: กีต้าร์</li>
+                    <li>วันเกิด: 26 กุมภาพันธ์ 2544</li>
+                    <li>สัญชาติ: ไทย</li>
+                    <li>น้ำหนัก: 80</li>
+                    <li>ส่วนสูง: 180</li>
+                    <li>ภูมิลำเนา: ศรีสะเกษ</li>
+                    <li>หมู่เลือด: A</li>
+                    <li>งานอดิเรก: ดูหมอลำ</li>
+                    <li>สีที่ชอบ: น้ำเงิน</li>
+                    <li>คติประจำใจ: bad day not bad life </li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
