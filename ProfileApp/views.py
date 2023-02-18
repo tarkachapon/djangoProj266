@@ -1,4 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+
+from ProfileApp.forms import ProductForm
+from ProfileApp.models import Product
+
 
 # Create your views here.
 def profile(request):
@@ -42,3 +46,31 @@ def showData(request):
     context = {'id':id,'name':name,'gender':gender,'height':height,'weight':weight,
                'food':food,'color':color,'address':address,'car':car,'pet':pet,'product':product}
     return render(request,'myShowData.html',context)
+
+lstOurProduct = []
+
+def listProduct(request):
+    context = {'product':lstOurProduct}
+    return render(request, 'listProduct.html',context)
+
+def inputProduct(request):
+    if request.method == 'POST':
+        form = ProductForm(request.POST)
+        if form.is_valid():
+            form = form.cleaned_data
+            id = form.get('id')
+            series = form.get('series')
+            bodyTypes = form.get('bodyTypes')
+            color = form.get('color')
+            system = form.get('system')
+            net = form.get('net')
+
+            ProductList = Product(id,series,bodyTypes,color,system,net)
+            lstOurProduct.append(ProductList)
+            return redirect('listProduct')
+        else:
+            form = ProductForm(form)
+    else:
+        form = ProductForm()
+        context = {'form':form}
+        return render(request,'inputProduct.html',context)

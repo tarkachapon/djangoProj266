@@ -22,5 +22,7 @@ urlpatterns = [
     path('interest/', views.interest, name='interest'),
     path('career/', views.career, name='career'),
     path('idol/', views.idol, name='idol'),
-    path('showData/', views.showData, name='showData')
+    path('showData/', views.showData, name='showData'),
+    path('listProduct/', views.listProduct, name='listProduct'),
+    path('inputProduct/', views.inputProduct, name='inputProduct')
 ]
